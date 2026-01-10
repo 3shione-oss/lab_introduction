@@ -74,10 +74,6 @@ body {
     animation: fadeUp 0.8s ease forwards;
 }
 
-#member ul {
-  padding-left: 2.0em; /* 好みで調整（1.5〜2emくらい） */
-}
-
 
 /* セクションごとに少し遅延 */
 .card:nth-child(1) { animation-delay: 0.1s; }
