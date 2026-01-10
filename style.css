@@ -16,6 +16,7 @@
 
 /* ===== dark mode ===== */
 body.dark {
+    --blue: #c5bdf8;
     --bg: #030f28;
     --card: #023182;
     --text: #e5e7eb;
