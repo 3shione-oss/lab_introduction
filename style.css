@@ -1,0 +1,136 @@
+/* ===== reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== light mode ===== */
+:root {
+    --blue: #483d8b;
+    --pink: #48b8ec;
+    --bg: #d1eaee;
+    --card: #ffffff;
+    --text: #242d3a;
+}
+
+/* ===== dark mode ===== */
+body.dark {
+    --bg: #030f28;
+    --card: #023182;
+    --text: #e5e7eb;
+}
+
+/* ===== base ===== */
+body {
+    font-family: "Segoe UI","Hiragino Kaku Gothic ProN",sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* ===== hero ===== */
+.hero {
+    background: linear-gradient(135deg, var(--blue), var(--pink));
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* ===== nav ===== */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 16px;
+    background: var(--card);
+    transition: background-color 0.6s ease;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+/* ===== width control ===== */
+.container {
+    max-width: 720px;   /* ← 横幅をしっかり絞る */
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* ===== card ===== */
+.card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 50px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* セクションごとに少し遅延 */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+.card h2 {
+    margin-bottom: 14px;
+    font-size: 22px;
+    border-left: 4px solid var(--blue);
+    padding-left: 10px;
+}
+
+/* ===== list ===== */
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.list li {
+    list-style: none;
+    background: rgba(0,0,0,0.04);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ===== button ===== */
+.mode-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--card);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+/* ===== footer ===== */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #9ca3af;
+}
+
+/* ===== animation ===== */
+@keyframes fadeUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== mobile ===== */
+@media (max-width:600px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+}
