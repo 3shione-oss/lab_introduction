@@ -59,7 +59,7 @@ body {
 .container {
     max-width: 720px;   /* ← 横幅をしっかり絞る */
     margin: 60px auto;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 /* ===== card ===== */
