@@ -11,3 +11,7 @@ btn.addEventListener("click", () => {
 
     btn.textContent = document.body.classList.contains("dark") ? "☀" : "🌙";
 });
+
+<><a href="#contact" class="contact-button">お問い合わせ</a><section id="contact">
+    < />!-- お問い合わせフォーム -->
+</section></>
